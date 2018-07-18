@@ -15,7 +15,7 @@ $command = build_command(extract_options(), $url, $path);
 $status = 0;
 $result = exec($command, $output, $status);
 
-var_dump($status);
+var_dump($status, $output);
 
 if ($status === 0) {
 	echo $path;
