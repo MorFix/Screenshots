@@ -15,13 +15,10 @@ $command = build_command(extract_options(), $url, $path);
 $status = 0;
 $result = exec($command, $output, $status);
 
-var_dump($status, $output);
-
 if ($status === 0) {
 	echo $path;
 	exit();
 }
 
-http_response_code(500);
-echo "Failed";
+echo 'Failed: <br /><br />' . implode('<br />', $output);
 ?>

@@ -8,7 +8,7 @@ function build_command($options, $url, $path) {
 		}
 	}
 	
-	return $command . ' "' . $url . '" ' . $path;
+	return $command . ' 2>&1 "' . $url . '" ' . $path;
 }
 
 function generate_path($output_dir, $filename = null) {		
