@@ -20,6 +20,5 @@ if ($status === 0) {
 	exit();
 }
 
-http_response_code(500);
-echo "Failed";
+echo 'Failed: <br /><br />' . implode('<br />', $output);
 ?>
